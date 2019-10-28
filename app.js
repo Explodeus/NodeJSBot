@@ -22,10 +22,6 @@ bot.onText(/\/curse/, (msg, match) => {
                         callback_data: 'USD'
                     },
                     {
-                        text: '₽ RUB',
-                        callback_data: 'RUB'
-                    },
-                    {
                         text: '₿ BTC',
                         callback_data: 'BTC'
                     }
@@ -41,8 +37,14 @@ bot.on('callback_query', query => {
     request('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5', function(error, response, body){
         const data = JSON.parse(body);
         const result = data.filter(item => item.ccy == query.data)[0];
+        const flag = {
+            'EUR': "🇪🇺",
+            'USD': "🇺🇸",
+            'BTC': "₿",
+            "UAH": "🇺🇦"
+        };
         let md = `
-            *${result.ccy} => ${result.base_ccy}*
+            *${flag[result.ccy]} ${result.ccy} 💱 ${flag[result.base_ccy]} ${result.base_ccy}*
             Покупка: _${result.buy}_
             Продажа: _${result.sale}_
         `

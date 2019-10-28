@@ -34,3 +34,18 @@ bot.onText(/\/curse/, (msg, match) => {
         }
     });
   });
+
+bot.on('callback_query', query => {
+    const id = query.message.chat.id;
+
+    request('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5', function(error, response, body){
+        const data = JSON.parse(body);
+        const result = data.filter(item => item.ccy == query.data)[0];
+        let md = `
+            *${result.ccy} => ${result.base_ccy}*
+            Покупка: _${result.buy}_
+            Продажа: _${result.sale}_
+        `
+        bot.sendMessage(id, md, {parse_mode: 'Markdown'});
+    });
+});

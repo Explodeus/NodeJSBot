@@ -14,19 +14,19 @@ bot.onText(/\/curse/, (msg, match) => {
             inline_keyboard: [
                 [
                     {
-                        text: 'EUR',
+                        text: '€ EUR',
                         callback_data: 'EUR'
                     },
                     {
-                        text: 'USD',
+                        text: '$ USD',
                         callback_data: 'USD'
                     },
                     {
-                        text: 'RUB',
+                        text: '₽ RUB',
                         callback_data: 'RUB'
                     },
                     {
-                        text: 'BTC',
+                        text: '₿ BTC',
                         callback_data: 'BTC'
                     }
                 ]

@@ -9,5 +9,28 @@ bot.onText(/\/curse/, (msg, match) => {
 
     const chatId = msg.chat.id;
 
-    bot.sendMessage(chatId, 'Test');
+    bot.sendMessage(chatId, 'Какая валюта вас интересует?', {
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    {
+                        text: 'EUR',
+                        callback_data: 'EUR'
+                    },
+                    {
+                        text: 'USD',
+                        callback_data: 'USD'
+                    },
+                    {
+                        text: 'RUB',
+                        callback_data: 'RUB'
+                    },
+                    {
+                        text: 'BTC',
+                        callback_data: 'BTC'
+                    }
+                ]
+            ]
+        }
+    });
   });

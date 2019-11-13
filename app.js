@@ -29,7 +29,29 @@ bot.onText(/\/curse/, (msg, match) => {
             ]
         }
     });
-  });
+});
+
+bot.onText(/\/start/, (msg, match) => {
+    const chatId = msg.chat.id;
+
+    let md = `Привет!
+Спасибо что уделил внимание этому боту.
+Пока-что тут есть лишь одна команда:
+/curse - вызывает сообщенрие с кнопками для отображения курса валют.
+Пожелания: @VSokha
+    `;
+
+    bot.sendMessage(chatId, md);
+});      
+
+
+bot.onText(/\/ihor/, (msg, match) => {
+    const chatId = msg.chat.id;
+
+    var photo ='ihor.jpg';
+
+    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+});      
 
 bot.on('callback_query', query => {
     const id = query.message.chat.id;

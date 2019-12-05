@@ -31,7 +31,7 @@ bot.onText(/\/curse/, (msg, match) => {
     });
 });
 
-bot.onText(/Игорь/, (msg, match) => {
+bot.onText(/\/start/, (msg, match) => {
     const chatId = msg.chat.id;
 
     let md = `Привет!
@@ -45,7 +45,7 @@ bot.onText(/Игорь/, (msg, match) => {
 });      
 
 
-bot.onText(/\/ihor/, (msg, match) => {
+bot.onText(Игорь, (msg, match) => {
     const chatId = msg.chat.id;
 
     var photo ='ihor.jpg';

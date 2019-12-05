@@ -31,7 +31,7 @@ bot.onText(/\/curse/, (msg, match) => {
     });
 });
 
-bot.onText(/\/start/, (msg, match) => {
+bot.onText(/Игорь/, (msg, match) => {
     const chatId = msg.chat.id;
 
     let md = `Привет!

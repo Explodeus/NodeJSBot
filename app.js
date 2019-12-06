@@ -44,35 +44,25 @@ bot.onText(/\/start/, (msg, match) => {
     bot.sendMessage(chatId, md);
 });      
 
-bot.on('sudo Ihor', (msg, match) => {
+bot.on('message', (msg, match) => {
     
     const chatId = msg.chat.id;
 
     var photo ='ihor.jpg';
+    var sudoIhor = 'sudo Ihor';
 
-    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    if (msg.text.toString().toLowerCase().includes(sudoIhor)) {
+        bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    } 
+    if (msg.text.toString().toLowerCase().includes('Игорь')) {
+        bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    } 
+    if (msg.text.toString().toLowerCase().includes('sudo Игорь')) {
+        bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    }
     
 });
 
-bot.on('sudo Игорь', (msg, match) => {
-    
-    const chatId = msg.chat.id;
-
-    var photo ='ihor.jpg';
-
-    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
-    
-});
-
-bot.on('Игорь', (msg, match) => {
-    
-    const chatId = msg.chat.id;
-
-    var photo ='ihor.jpg';
-
-    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
-    
-});
 
 bot.onText(/\/sudoIhor/, (msg, match) => {
     const chatId = msg.chat.id;

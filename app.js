@@ -45,7 +45,7 @@ bot.onText(/\/start/, (msg, match) => {
 });      
 
 
-bot.onText(Игорь, (msg, match) => {
+bot.onText(/\/sudoIhor/, (msg, match) => {
     const chatId = msg.chat.id;
 
     var photo ='ihor.jpg';

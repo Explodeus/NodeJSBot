@@ -49,15 +49,15 @@ bot.on('message', (msg, match) => {
     const chatId = msg.chat.id;
 
     var photo ='ihor.jpg';
-    var sudoIhor = 'sudo Ihor';
+    var sudoIhor = 'sudo ihor';
 
     if (msg.text.toString().toLowerCase().includes(sudoIhor)) {
         bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
     } 
-    if (msg.text.toString().toLowerCase().includes('Игорь')) {
+    if (msg.text.toString().toLowerCase().includes('игорь')) {
         bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
     } 
-    if (msg.text.toString().toLowerCase().includes('sudo Игорь')) {
+    if (msg.text.toString().toLowerCase().includes('sudo игорь')) {
         bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
     }
     

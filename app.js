@@ -44,6 +44,35 @@ bot.onText(/\/start/, (msg, match) => {
     bot.sendMessage(chatId, md);
 });      
 
+bot.on('sudo Ihor', (msg, match) => {
+    
+    const chatId = msg.chat.id;
+
+    var photo ='ihor.jpg';
+
+    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    
+});
+
+bot.on('sudo Игорь', (msg, match) => {
+    
+    const chatId = msg.chat.id;
+
+    var photo ='ihor.jpg';
+
+    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    
+});
+
+bot.on('Игорь', (msg, match) => {
+    
+    const chatId = msg.chat.id;
+
+    var photo ='ihor.jpg';
+
+    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
+    
+});
 
 bot.onText(/\/sudoIhor/, (msg, match) => {
     const chatId = msg.chat.id;

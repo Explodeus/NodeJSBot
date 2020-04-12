@@ -42,35 +42,7 @@ bot.onText(/\/start/, (msg, match) => {
     `;
 
     bot.sendMessage(chatId, md);
-});      
-
-bot.on('message', (msg, match) => {
-    
-    const chatId = msg.chat.id;
-
-    var photo ='ihor.jpg';
-    var sudoIhor = 'sudo ihor';
-
-    if (msg.text.toString().toLowerCase().includes(sudoIhor)) {
-        bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
-    } 
-    if (msg.text.toString().toLowerCase().includes('игорь')) {
-        bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
-    } 
-    if (msg.text.toString().toLowerCase().includes('sudo игорь')) {
-        bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
-    }
-    
-});
-
-
-bot.onText(/\/sudoIhor/, (msg, match) => {
-    const chatId = msg.chat.id;
-
-    var photo ='ihor.jpg';
-
-    bot.sendPhoto(chatId, photo, {caption: "ИИИИгорь"});
-});      
+});          
 
 bot.on('callback_query', query => {
     const id = query.message.chat.id;
